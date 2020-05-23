@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: lfbvpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lfbvpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lfbvpipelinesjavascriptdocker 
+          image: registroluisilv.azurecr.io/lfbvpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
